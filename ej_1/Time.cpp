@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "Time.hpp"
 
 using namespace std;
@@ -47,17 +46,17 @@ void Time::setAmPm(bool isDay) {
     this->isDay = isDay;
 }
 void Time::getHour() {
-    cout << "La hora es: " << this->hh << "h\n";
+    cout << "La hora es: " << setw(2) << setfill('0') << this->hh << "h\n";
 }
 void Time::getMinute() {
-    cout << "Los minutos son: " << this->mm << "h\n";
+    cout << "Los minutos son: " << setw(2) << setfill('0') << this->mm << "h\n";
 }
 void Time::getSecond() {
-    cout << "Los segundos son: " << this->ss << "h\n";
+    cout << "Los segundos son: " << setw(2) << setfill('0') << this->ss << "h\n";
 }
 void Time::getAmPm() {
     cout << (this->isDay ? "La hora es pm\n" : "La hora es am\n");
 }
 void Time::getTime() {
-    cout << this->hh * this->isDay << ":" << this->mm << ":" << this->ss << "\n";
+    cout << setw(2) << setfill('0') << this->hh * this->isDay << ":" << setw(2) << setfill('0') << this->mm << ":" << setw(2) << setfill('0') << this->ss << "\n";
 }
