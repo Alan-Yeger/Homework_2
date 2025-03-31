@@ -2,7 +2,6 @@
 #include <iostream>
 #include <iomanip>
 
-
 using namespace std;
 
 class Time {
@@ -12,11 +11,6 @@ class Time {
         Time(int hh, int mm);
         Time(int hh, int mm, int ss);
         Time(int hh, int mm, int ss, bool isDay);
-        int hh;
-        int mm;
-        int ss;
-        bool isDay;
-    private:
         void setHour(int hh);
         void setMinute(int mm);
         void setSecond(int ss);
@@ -26,4 +20,10 @@ class Time {
         void getSecond();
         void getAmPm();
         void getTime();
+        
+        private:
+        int hh;
+        int mm;
+        int ss;
+        bool isDay;
 };
