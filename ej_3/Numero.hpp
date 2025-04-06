@@ -19,11 +19,11 @@ class Numero {
 class Entero: public Numero {
     public:    
         Entero(int n); //El resto de las clases sobreescriben los métodos de la interfaz
-        virtual void suma(Numero* x) override;
-        virtual void resta(Numero* x) override;
-        virtual void multiplicacion(Numero* x) override;
-        virtual void division(Numero* x) override;
-        virtual string toString() override;
+        void suma(Numero* x) override;
+        void resta(Numero* x) override;
+        void multiplicacion(Numero* x) override;
+        void division(Numero* x) override;
+        string toString() override;
 
     private:
         int n; //Entero n para enteros
@@ -32,11 +32,11 @@ class Entero: public Numero {
 class Real: public Numero {
     public:
         Real(float r);
-        virtual void suma(Numero* x) override;
-        virtual void resta(Numero* x) override;
-        virtual void multiplicacion(Numero* x) override;
-        virtual void division(Numero* x) override;
-        virtual string toString() override;
+        void suma(Numero* x) override;
+        void resta(Numero* x) override;
+        void multiplicacion(Numero* x) override;
+        void division(Numero* x) override;
+        string toString() override;
 
     private:
         float r; // float r para reales
@@ -45,11 +45,11 @@ class Real: public Numero {
 class Complejo: public Numero {
     public:
         Complejo(float a, float b);
-        virtual void suma(Numero* x) override;
-        virtual void resta(Numero* x) override;
-        virtual void multiplicacion(Numero* x) override;
-        virtual void division(Numero* x) override;
-        virtual string toString() override;
+        void suma(Numero* x) override;
+        void resta(Numero* x) override;
+        void multiplicacion(Numero* x) override;
+        void division(Numero* x) override;
+        string toString() override;
     
     private:
         float re; // float para parte real
