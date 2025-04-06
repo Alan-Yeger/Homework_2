@@ -34,8 +34,8 @@ class Real: public Numero {
         virtual void division(Numero* x) override;
         virtual string toString(Numero* x) override;
 
-    protected:
-        Real* r;
+    private:
+        float r;
 };
 
 class Complejo: public Numero {
@@ -47,7 +47,7 @@ class Complejo: public Numero {
         virtual void division(Numero* x) override;
         virtual string toString(Numero* x) override;
     
-    protected:
-        Complejo* re;
-        Complejo* im;
+    private:
+        float re;
+        float im;
 };
