@@ -6,7 +6,7 @@ using namespace std;
 
 class Cuenta {
     public:
-        Cuenta(double balanceInicial, string titular) : balance(balanceInicial), titularCuenta(titular){};
+        Cuenta(double balanceInicial, string titular): balance(balanceInicial), titularCuenta(titular){};
 
         void depositar(double monto){ 
             if (monto > 0) balance += monto;
@@ -21,13 +21,13 @@ class Cuenta {
 };
 
 class CajaDeAhorro: public Cuenta {
-    CajaDeAhorro(double balanceInicial, string titular): Cuenta(balanceInicial, titular){};
-    virtual void retirar(double monto) override;
-    virtual void mostrarInfo() override;
-    virtual ~CajaDeAhorro();
+    CajaDeAhorro(double balanceInicial, string titular): Cuenta(balanceInicial, titular), countMostrarInfo(0){};
+    void retirar(double monto) override;
+    void mostrarInfo() override;
+    friend class CuentaCorriente;
 
-    protected:
-        int countMostrarInfo = 0;
+    private:
+        int countMostrarInfo;
 };
 
 class CuentaCorriente: public Cuenta {
