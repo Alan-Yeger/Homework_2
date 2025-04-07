@@ -110,10 +110,10 @@ int main() {
                 cout << (t.getAmPm() ? "La hora es pm" : "La hora es am") << endl; //Mostramos si es de día
                 break;
             case 11:
-                cout << t.getHour() << ":"; //Imprimimos el tiempo completo
-                cout << t.getMinute() << ":";
-                cout << t.getSecond() << ":";
-                cout << t.getAmPm() << endl;
+                cout << setw(2) << setfill('0') << t.getHour() << ":"; //Imprimimos el tiempo completo
+                cout << setw(2) << setfill('0') << t.getMinute() << ":";
+                cout << setw(2) << setfill('0') << t.getSecond();
+                cout << (t.getAmPm() ? " pm" : " am") << endl;
                 break;
             case 12:
                 cout << t.getTime() << endl; //Imprimimos el tiempo en formato 24hs
