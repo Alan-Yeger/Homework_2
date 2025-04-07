@@ -44,6 +44,9 @@ g++ Curso.cpp Estudiante.cpp main.cpp -o ejec
 ```
 
 4. Probar cosas
+
+### Tests
+
 1. Presionar 1-Alan Yeger-1
 2. Presionar 1-Juani Alvarez-2
 3. Presionar 2-1-2-2
