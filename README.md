@@ -54,6 +54,8 @@ g++ Curso.cpp Estudiante.cpp main.cpp -o ejec
 5. Presionar 5-6-3-2-5-7
 6. Presionar 8
 
+### Más tests
+
 5. Probar los demás tests:
 ```sh
 g++ Curso.cpp Estudiante.cpp test.cpp -o tests
